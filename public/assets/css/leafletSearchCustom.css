@@ -1,0 +1,43 @@
+.search-input {
+    width: 100%;
+    border: 1px solid #f29100;
+    height: 40px;
+    border-radius: 5px;
+    background: #282828;
+    color: #CDCDCD;
+    padding-left: 5px;
+}
+.leaflet-control-search .search.tooltip {
+    z-index: 999;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    padding: 5px;
+}
+.leaflet-control-search .search-cancel {
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 1px;
+    top: -4px;
+    margin: 6px 0;
+    background: url('/image/icons/search-icon.png') no-repeat 0 -46px;
+    text-decoration: none;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+.leaflet-control-search .search-cancel:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.leaflet-control-search .search-cancel span {
+    display: none;/* comment for cancel button imageless */
+    font-size: 18px;
+    line-height: 20px;
+    color: #ccc;
+    font-weight: bold;
+}
+.leaflet-control-search .search-cancel:hover span {
+    color: #aaa;
+}
