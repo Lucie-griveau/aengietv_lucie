@@ -1,0 +1,159 @@
+ /*** instagram ***/
+ .zmoto-instagram-post {
+    position: relative;
+    text-align: center;
+  }
+  .zmoto-instagram-post:hover a.zmoto-instagram-icon {
+    opacity: 1
+  }
+  a.zmoto-instagram-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 33px;
+    top: 45%;
+    text-align: center;
+    font-size: 21px;
+    color: #00b9ec;
+    z-index: 999;
+    opacity: 0;
+  }
+  .zmovo-footer-area {
+    margin-top: auto;
+  }
+  .zmovo-footer {
+    background-color: #1D1D1D;
+    position: absolute;
+    width: 100%;
+    /*  bottom: 0;*/
+  }
+  .align-items-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1em;
+  }
+  h2.zmovo-ft-widget-title {
+    font-size: 18px;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .zmoto-ft-widget-contetn {
+    text-align: left;
+    font-size: 10px;
+    color: #808080;
+  }
+  .zmoto-ft-widget-contetn-center {
+    text-align: center;
+    font-size: 10px;
+    color: #808080;
+  }
+  .zmoto-ft-widget-contetn-center img {
+    /*width: 20%;*/
+  }
+  .zmoto-ft-widget-contetn ul li a {
+    color: #f90;
+  }
+  .zmoto-ft-widget-contetn ul li a:hover {
+    color: #FFC773;
+  }
+  .zmoto-ft-widget-contetn ul li {
+    line-height: 32px;
+  }
+  .zmovo-ft-newsletter input {
+    padding: 12px;
+    display: block;
+    border-radius: 0;
+    min-height: 41px;
+    background-color: #02020f;
+    border-color: transparent;
+  }
+  .zmovo-ft-newsletter {
+    position: relative;
+  }
+  .zmovo-ft-newsletter button {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    border: transparent;
+    min-height: 39px;
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: #030316;
+    border-left: 3px solid #0f0f1b;
+    color: #fff;
+  }
+  .zmovo-ft-newsletter button:focus, .zmovo-ft-newsletter input:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+  .zmovo-ft-social-widget ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .zmovo-ft-social-widget ul li a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #02020f;
+    padding: 5px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 13px;
+    line-height: 26px;
+  }
+  .zmovo-ft-social-widget ul li a:hover {
+    background-color: #00b9ec;
+    color: #fff;
+  }
+  /*** footer bottom ***/
+  .zmovo-ft-menu ul li {
+    display: inline-block;
+  }
+  .zmovo-ft-menu ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    margin-right: 14px;
+  }
+  .zmovo-ft-menu ul li a:hover {
+    color: #00b9ec;
+  }
+  .zmovo-ft-copyright {
+    text-align: right;
+  }
+  .zmovo-ft-copyright a:hover {
+    color: #ff7800;
+  }
+  .zmovo-footer-buttom {
+    padding: 25px 0 20px 0;
+    background-color: #02020f;
+  }
+  /* ---------------- back to Top ----------------------*/
+  .to-top:hover, .home-2 .to-top:hover {
+    background: #333;
+    color: #fff
+  }
+  .movie-item-content-center a:hover {
+    color: #00b9ec;
+  }
+  .to-top {
+    background: #fff;
+    bottom: 19px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    height: 45px;
+    line-height: 44px;
+    overflow: hidden;
+    position: fixed;
+    right: 3%;
+    text-align: center;
+    width: 45px;
+    z-index: 2147483647;
+  }

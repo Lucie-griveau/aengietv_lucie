@@ -1,0 +1,103 @@
+
+@media (min-width:360px) and (max-width: 881px){
+    
+    .mainVideo
+    {
+        margin-top: 0;
+    }
+
+}
+
+.title
+{
+    /* align-content: stretch; */
+    color: #ff7800;
+    /* display: flex; */
+    font-family: Roboto;
+    font-size: 30px;
+}
+
+
+.citation
+{ 
+
+    color: #ff7800;
+    /* justify-content: center; */
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+
+.actuality
+{
+    margin-bottom: 2%;
+}
+
+.actualitySubTitle
+{
+    color: #ff7800;
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+
+.actualityDescription
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 50px;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .actualityDescription
+    {
+        margin-bottom: 50px;
+        font-family: Roboto;
+        font-size: 15px;
+    }
+}
+
+
+.contributorDescription
+{
+    font-family: Roboto;
+    font-size: 20px;
+    /* margin-right: 90px; */
+    
+}
+
+
+.becomeSO,  .becomeContributor
+{   
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: 60px;
+    
+}
+
+.sODescription, .contributorDescription
+{
+    text-align: left;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+
+/* RESPONSIVE */
+/* Moto G4, G6Play*/
+@media screen and (max-width: 360px) {
+    .tutorial{
+        width: 100%;
+    }
+
+    .becomeSO,  .becomeContributor{
+        flex-direction: column;
+    }
+
+}
+
