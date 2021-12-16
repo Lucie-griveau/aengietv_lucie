@@ -73,14 +73,11 @@
                                                                 <!-- if Community Manager or Station Owner -->
                                                                     <li>
                                                                         <a href="/mytv/dashboard/settings/community"><?= "community settings" ?></a>
-                                                                    </li>
-                                                                @endif
 
                                                                 <!-- if Station Owner -->
                                                                     <li>
                                                                         <a href="/mytv/dashboard/settings/station"><?= "station settings" ?></a>
                                                                     </li>
-                                                                @endif
 
                                                             </ul>
 
@@ -88,7 +85,6 @@
                                                     </ul>
 
                                                 </li>
-                                            @endif
                                         </ul>
 
                                     </li>
