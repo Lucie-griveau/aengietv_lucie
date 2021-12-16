@@ -44,6 +44,7 @@
                                             </li>
 
                                             <!-- if($isStationOwner || $isCommunityManager || $isStreamMaster) -->
+                                            @if($user->role_id <= 3)
 
                                                 <li class="has-sub">
                                                     <span class="submenu-button"></span>
@@ -71,13 +72,18 @@
                                                                 </li>
 
                                                                 <!-- if Community Manager or Station Owner -->
+                                                                @if($user->role_id <= 2)
                                                                     <li>
                                                                         <a href="/mytv/dashboard/settings/community"><?= "community settings" ?></a>
+                                                                    </li>
+                                                                @endif
 
                                                                 <!-- if Station Owner -->
+                                                                @if($user->role_id == 1)
                                                                     <li>
                                                                         <a href="/mytv/dashboard/settings/station"><?= "station settings" ?></a>
                                                                     </li>
+                                                                @endif
 
                                                             </ul>
 
@@ -85,6 +91,7 @@
                                                     </ul>
 
                                                 </li>
+                                            @endif
                                         </ul>
 
                                     </li>
