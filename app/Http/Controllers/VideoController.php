@@ -10,5 +10,5 @@ class VideoController extends Controller
     public function contents (){
         return view('contents', ['videos' => Video::all(), 'stations' => Station::all()]);
     }
-
 }
+

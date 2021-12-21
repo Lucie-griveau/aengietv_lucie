@@ -11,3 +11,4 @@ class CategoryController extends Controller
         return view('contacts', ['categories' => Category::all()]);
     }
 }
+

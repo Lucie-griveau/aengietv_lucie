@@ -13,9 +13,10 @@ class Argument extends Model
 
     protected $fillable = ['argument','icon', 'slug'];
 
+    // One-to-many relationship
+    // Link arguments with stations
     public function stations()
     {
         return $this->hasMany(Station::class);
     }
 }
-
