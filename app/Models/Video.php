@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,21 +11,47 @@ class Video extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [ 'title', 'description', 'url', 'poster', 'user_id', 'station_id', 'is_published', 'publication_date', 'upload_date', 'duration', 'is_showreel', 'category_id', 'status_id', 'tag_id'];
+    protected $fillable = [
+        'title',
+        'description',
+        'url',
+        'poster',
+        'duration',
+        'is_published',
+        'publication_date',
+        'upload_date',
+        'is_showreel',
+        'user_id',
+        'station_id',
+        'status_id',
+        'tag_id'];
 
-    public function videoUsers(){
+    // Many-to-many relationships
+    // Link videos with users (intermediate table user_video)
+    public function videoUsers()
+    {
         return $this->belongsToMany(User::class);
     }
-
-    public function videoStations(){
+    // Link videos with stations (intermediate table station_video)
+    public function videoStations()
+    {
         return $this->belongsToMany(Station::class);
     }
 
-    public function videoStatus(){
+    // Inverse one-to-many relationship
+    // Link videos with status
+    public function videoStatus()
+    {
         return $this->belongsTo(Status::class);
     }
-    public function videoTags(){
+    // Link videos with tags
+    public function videoTags()
+    {
         return $this->belongsTo(Tag::class);
     }
+    // Link videos with playlists
+    // public function videoPlaylists()
+    // {
+    //     return $this->belongsTo(Playlist::class);
+    // }
 }
-
