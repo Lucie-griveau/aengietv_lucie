@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Video;
 use App\Models\Station;
+use App\Models\Video;
 
 class VideoController extends Controller
 {
     public function contents (){
-        return view('contents', ['videos' => Video::all(), 'stations' => Station::all()]);
+        return view('contents', ['allVideos' => Video::all(), 'allStations' => Station::all()]);
     }
 }
 
