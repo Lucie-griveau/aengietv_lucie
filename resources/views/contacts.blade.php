@@ -17,7 +17,7 @@
                             <div class="form-group">
                                 <select class="form-control" name="subject" id="subject">
                                     <option value=""><?= "Select Subject" ?></option>
-                                    @foreach($categories as $categorie)
+                                    @foreach($allCategories as $categorie)
                                     <option value=" {{ $categorie->category }}">{{ $categorie->category }}</option>
                                     @endforeach
                                 </select>

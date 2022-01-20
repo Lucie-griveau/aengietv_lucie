@@ -2,18 +2,18 @@
 
 @section('content')
 
-@include('include.submenu')
+@include('include/submenu')
 
 <div id="contributionsResults" class="contributions">
 
-    @foreach ($videos as $video)
+    @foreach ($allVideos as $video)
 
     <div class="contribution">
         <!-- data-backdrop="static"-->
         <a href="#" title="{{ $video->title }}" data-toggle="modal" data-target="#modalVideo" onClick="playVideoFromContents('{{ $video->url }}')" style="color: white">
             <div class="contributionHeader" style="background-color: #f90"></div>
             <div class="contributionLogo">
-                @foreach ($stations as $station)
+                @foreach ($allStations as $station)
                     @if($station->id == $video->station_id)
                         <img style="width: 50px;" src="{{ $station->logo }}">
                     @endif
