@@ -18,87 +18,109 @@
                         <div class="menu-container">
                             <div id="navigation">
                                 <ul>
-                                    <li class="">
-                                        <a href="/"><?= "home" ?></a>
-                                    </li>
-                                    <li class="">
-                                        <a href="/channels"><?= "stations" ?></a><!-- if connected href="/channels/user_id" -->
-                                    </li>
-                                    <li class="">
-                                        <a href="/contents"><?= "contents" ?></a><!-- if connected href="/contents/user_id" -->
-                                    </li>
 
-                                    <!-- Dropdown menu -->
-                                    <li class="has-sub">
-                                        <span class="submenu-button"></span>
-                                        <a href="/mytv/{user_id}">myAEngie<sup class="c1" style="font-size: 10px; top:-1.5em">tv</sup></a>
-                                        <ul>
-                                            <li>
-                                                <a href="/mytv/{user_id}/library"><?= "library" ?></a>
-                                            </li>
-                                            <li>
-                                                <a href="/mytv/{user_id}/notifications"><?= "notifications" ?></a>
-                                            </li>
-                                            <li>
-                                                <a href="/mytv/{user_id}/user-settings"><?= "user settings" ?></a>
-                                            </li>
+                                    <!-- if unregistered user -->
+                                    <!--if($user->id == 0)
+                                        <li class="">
+                                            <a href="/"><?= "home" ?></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/channels"><?= "stations" ?></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/contents"><?= "contents" ?></a>
+                                        </li>
+                                    endif -->
 
-                                            <!-- if($isStationOwner || $isCommunityManager || $isStreamMaster) -->
-                                            @if($user->role_id <= 3)
+                                    <!-- if registered user -->
+                                    @if ($user->id != 0)
+                                        <li class="">
+                                            <a href="/{{ $user->id }}"><?= "home" ?></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/channels/{{ $user->id }}"><?= "stations" ?></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/contents/{{ $user->id }}"><?= "contents" ?></a>
+                                        </li>
 
-                                                <li class="has-sub">
-                                                    <span class="submenu-button"></span>
-                                                    <a href="/mytv/{user_id}/dashboard"><?= "dashboard" ?></a>
-                                                    <!-- after selection of station href="/mytv/{user_id}/dashboard/{station_id}" -->
+                                        <!-- Dropdown menu -->
+                                        <li class="has-sub">
+                                            <span class="submenu-button"></span>
+                                            <a href="/mytv/{{ $user->id }}">myAEngie<sup class="c1" style="font-size: 10px; top:-1.5em">tv</sup></a>
 
-                                                    <ul>
-                                                        <li>
-                                                            <a href="/mytv/{user_id}/dashboard/{station_id}/community"><?= "community" ?></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="/mytv/{user_id}/dashboard/{station_id}/contributions"><?= "contributions" ?></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="/mytv/{user_id}/dashboard/{station_id}/playlist"><?= "playlist" ?></a>
-                                                        </li>
-
-                                                        <li class="has-sub">
-                                                            <span class="submenu-button"></span>
-                                                            <a href="/mytv/{user_id}/dashboard/{station_id}/settings"><?= "settings" ?></a>
-                                                            <ul>
-
-                                                                <li>
-                                                                    <a href="/mytv/dashboard/settings/event"><?= "broadcast settings" ?></a>
-                                                                </li>
-
-                                                                <!-- if Community Manager or Station Owner -->
-                                                                @if($user->role_id <= 2)
-                                                                    <li>
-                                                                        <a href="/mytv/dashboard/settings/community"><?= "community settings" ?></a>
-                                                                    </li>
-                                                                @endif
-
-                                                                <!-- if Station Owner -->
-                                                                @if($user->role_id == 1)
-                                                                    <li>
-                                                                        <a href="/mytv/dashboard/settings/station"><?= "station settings" ?></a>
-                                                                    </li>
-                                                                @endif
-
-                                                            </ul>
-
-                                                        </li>
-                                                    </ul>
-
+                                            <!-- First level -->
+                                            <ul>
+                                                <li>
+                                                    <a href="/mytv/{{ $user->id }}/library"><?= "library" ?></a>
                                                 </li>
-                                            @endif
-                                        </ul>
+                                                <li>
+                                                    <a href="/mytv/{{ $user->id }}/notifications"><?= "notifications" ?></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/mytv/{{ $user->id }}/user-settings"><?= "user settings" ?></a>
+                                                </li>
 
-                                    </li>
-                                    <li>
-                                        <a href="/support"><?= "contacts" ?></a>
-                                    </li>
+                                                <!-- if($isStationOwner || $isCommunityManager || $isStreamMaster) -->
+                                                @if($user->role_id <= 3)
 
+                                                    <li class="has-sub">
+                                                        <span class="submenu-button"></span>
+                                                        <a href="/mytv/{{ $user->id }}/dashboard"><?= "dashboard" ?></a>
+                                                        <!-- after selection of station href="/mytv/{$user->id}/dashboard/{$station->id}" -->
+
+                                                        <!-- Second level -->
+                                                        <ul>
+                                                            <li>
+                                                                <a href="/mytv/{{ $user->id }}/dashboard/community"><?= "community" ?></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/mytv/{{ $user->id }}/dashboard/contributions"><?= "contributions" ?></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/mytv/{{ $user->id }}/dashboard/playlist"><?= "playlist" ?></a>
+                                                            </li>
+
+                                                            <li class="has-sub">
+                                                                <span class="submenu-button"></span>
+                                                                <a href="/mytv/{{ $user->id }}/dashboard/settings"><?= "settings" ?></a>
+
+                                                                <!-- Third level -->
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/mytv/{{ $user->id }}/dashboard/settings/event"><?= "broadcast settings" ?></a>
+                                                                    </li>
+
+                                                                    <!-- if Community Manager or Station Owner -->
+                                                                    @if($user->role_id <= 2)
+                                                                        <li>
+                                                                            <a href="/mytv/{{ $user->id }}/dashboard/settings/community"><?= "community settings" ?></a>
+                                                                        </li>
+                                                                    @endif
+
+                                                                    <!-- if Station Owner -->
+                                                                    @if($user->role_id == 1)
+                                                                        <li>
+                                                                            <a href="/mytv/{{ $user->id }}/dashboard/settings/station"><?= "station settings" ?></a>
+                                                                        </li>
+                                                                    @endif
+
+                                                                </ul>
+                                                                <!-- End third level -->
+                                                            </li>
+                                                        </ul>
+                                                        <!-- End second level -->
+                                                    </li>
+                                                @endif
+                                            </ul>
+                                            <!-- End first level -->
+                                        </li>
+                                        <!-- End dropdown menu -->
+
+                                        <li>
+                                            <a href="/support/{{ $user->id }}"><?= "contacts" ?></a>
+                                        </li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
