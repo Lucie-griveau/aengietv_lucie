@@ -8,7 +8,7 @@
                     d="M20,4 L4,4 C2.9,4 2,4.9 2,6 L2,18 C2,19.1 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,6 C22,4.9 21.1,4 20,4 M20,18 L4,18 L4,6 L20,6 L20,18 M4,0 L20,0 L20,2 L4,2 M4,22 L20,22 L20,24 L4,24 M12,12 C13.3807119,12 14.5,10.8807119 14.5,9.5 C14.5,8.11928813 13.3807119,7 12,7 C10.6192881,7 9.5,8.11928813 9.5,9.5 C9.5,10.8807119 10.6192881,12 12,12 M12,8.5 C12.55,8.5 13,8.95 13,9.5 C13,10.05 12.55,10.5 12,10.5 C11.45,10.5 11,10.05 11,9.5 C11,8.95 11.45,8.5 12,8.5 M17,16 C17,13.9 13.69,13 12,13 C10.31,13 7,13.9 7,16 L7,17 L17,17 L17,16 M8.81,15.5 C9.42,15 10.84,14.5 12,14.5 C13.17,14.5 14.59,15 15.2,15.5 L8.81,15.5 Z"
                     id="Shape" fill="#707070" fill-rule="nonzero"></path>
             </svg>-->
-            <a class="nav-link" href="/mytv/{user_id}/library">Library</a>
+            <a class="nav-link" href="/mytv/{{ $user->id }}/library">Library</a>
         </li>
         <li class="nav-item" id="notifications">
             <!--<svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@
                     d="M11,18 L13,18 L13,16 L11,16 L11,18 M12,6 C9.790861,6 8,7.790861 8,10 L10,10 C10,8.8954305 10.8954305,8 12,8 C13.1045695,8 14,8.8954305 14,10 C14,12 11,11.75 11,15 L13,15 C13,12.75 16,12.5 16,10 C16,7.790861 14.209139,6 12,6 M5,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,19 C21,20.1045695 20.1045695,21 19,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,5 C3,3.8954305 3.8954305,3 5,3 Z"
                     id="Shape" fill="#707070" fill-rule="nonzero"></path>
             </svg>-->
-            <a class="nav-link" href="/mytv/{user_id}/notifications">Notifications</a>
+            <a class="nav-link" href="/mytv/{{ $user->id }}/notifications">Notifications</a>
         </li>
         <li class="nav-item" id="user-settings">
             <!--<svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@
                     d="M20,4 L4,4 C2.9,4 2,4.9 2,6 L2,18 C2,19.1 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,6 C22,4.9 21.1,4 20,4 M20,18 L4,18 L4,6 L20,6 L20,18 M4,0 L20,0 L20,2 L4,2 M4,22 L20,22 L20,24 L4,24 M12,12 C13.3807119,12 14.5,10.8807119 14.5,9.5 C14.5,8.11928813 13.3807119,7 12,7 C10.6192881,7 9.5,8.11928813 9.5,9.5 C9.5,10.8807119 10.6192881,12 12,12 M12,8.5 C12.55,8.5 13,8.95 13,9.5 C13,10.05 12.55,10.5 12,10.5 C11.45,10.5 11,10.05 11,9.5 C11,8.95 11.45,8.5 12,8.5 M17,16 C17,13.9 13.69,13 12,13 C10.31,13 7,13.9 7,16 L7,17 L17,17 L17,16 M8.81,15.5 C9.42,15 10.84,14.5 12,14.5 C13.17,14.5 14.59,15 15.2,15.5 L8.81,15.5 Z"
                     id="Shape" fill="#707070" fill-rule="nonzero"></path>
             </svg>-->
-            <a class="nav-link" href="/mytv/{user_id}/user_settings">User Settings</a>
+            <a class="nav-link" href="/mytv/{{ $user->id }}/user_settings">User Settings</a>
         </li>
 
         <!-- if($isStationOwner || $isCommunityManager || $isStreamMaster) -->
@@ -36,7 +36,7 @@
                         d="M20.95,11 L22.5,11 L22.5,13 L20.95,13 C20.5,17.17 17.17,20.5 13,20.95 L13,22.5 L11,22.5 L11,20.95 C6.83,20.5 3.5,17.17 3.05,13 L1.5,13 L1.5,11 L3.05,11 C3.5,6.83 6.83,3.5 11,3.05 L11,1.5 L13,1.5 L13,3.05 C17.17,3.5 20.5,6.83 20.95,11 M5.07,11 L6.5,11 L6.5,13 L5.07,13 C5.50656016,16.0761636 7.92383641,18.4934398 11,18.93 L11,17.5 L13,17.5 L13,18.93 C16.0761636,18.4934398 18.4934398,16.0761636 18.93,13 L17.5,13 L17.5,11 L18.93,11 C18.4934398,7.92383641 16.0761636,5.50656016 13,5.07 L13,6.5 L11,6.5 L11,5.07 C7.92383641,5.50656016 5.50656016,7.92383641 5.07,11 M16,16 L8,16 L8,15 C8,13.67 10.67,13 12,13 C13.33,13 16,13.67 16,15 L16,16 M12,8 C13.1045695,8 14,8.8954305 14,10 C14,11.1045695 13.1045695,12 12,12 C10.8954305,12 10,11.1045695 10,10 C10,8.8954305 10.8954305,8 12,8 Z"
                         id="Shape" fill="#707070" fill-rule="nonzero"></path>
                 </svg>-->
-                <a class="nav-link" href="/mytv/{user_id}/dashboard">Dashboard ▾</a>
+                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard">Dashboard ▾</a>
 
                 <!-- Second level -->
                 <div class="row">
@@ -48,7 +48,7 @@
                                         d="M12,5.5 C13.9329966,5.5 15.5,7.06700338 15.5,9 C15.5,10.9329966 13.9329966,12.5 12,12.5 C10.0670034,12.5 8.5,10.9329966 8.5,9 C8.5,7.06700338 10.0670034,5.5 12,5.5 M5,8 C5.56,8 6.08,8.15 6.53,8.42 C6.38,9.85 6.8,11.27 7.66,12.38 C7.16,13.34 6.16,14 5,14 C3.34314575,14 2,12.6568542 2,11 C2,9.34314575 3.34314575,8 5,8 M19,8 C20.6568542,8 22,9.34314575 22,11 C22,12.6568542 20.6568542,14 19,14 C17.84,14 16.84,13.34 16.34,12.38 C17.2118737,11.254419 17.6165683,9.83619702 17.47,8.42 C17.92,8.15 18.44,8 19,8 M5.5,18.25 C5.5,16.18 8.41,14.5 12,14.5 C15.59,14.5 18.5,16.18 18.5,18.25 L18.5,20 L5.5,20 L5.5,18.25 M0,20 L0,18.5 C0,17.11 1.89,15.94 4.45,15.6 C3.86,16.28 3.5,17.22 3.5,18.25 L3.5,20 L0,20 M24,20 L20.5,20 L20.5,18.25 C20.5,17.22 20.14,16.28 19.55,15.6 C22.11,15.94 24,17.11 24,18.5 L24,20 Z"
                                         id="Shape" fill="#707070" fill-rule="nonzero"></path>
                                 </svg>-->
-                                <a class="nav-link" href="/mytv/{user_id}/dashboard/{station_id}/community">Community</a>
+                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/community">Community</a>
                             </li>
                             <li class="nav-item" id="contributions">
                                 <!--<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@
                                         id="Shape" fill="#707070" fill-rule="nonzero"></path>
                                 </svg>-->
                                 <!--<img src="/images/icons/1x/dashboardMenu/contributions.png" alt="contributionsIcon" width="24px" height="24px">-->
-                                <a class="nav-link" href="/mytv/{user_id}/dashboard/{station_id}/contributions">Contributions</a>
+                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/contributions">Contributions</a>
                             </li>
                             <li class="nav-item" id="playlist">
                                 <!--<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
                                         d="M10.78,12.05 L13.81,11.79 L15,9 L16.19,11.79 L19.22,12.05 L16.92,14.04 L17.61,17 L15,15.47 L12.39,17 L13.08,14.04 L10.78,12.05 M22,8 L22,18 C22,19.11 21.11,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L10,4 L12,6 L20,6 C21.1045695,6 22,6.8954305 22,8 M20,8 L4,8 L4,18 L20,18 L20,8 Z"
                                         id="Shape" fill="#707070" fill-rule="nonzero"></path>
                                 </svg>-->
-                                <a class="nav-link" href="/mytv/{user_id}/dashboard/{station_id}/playlist">Playlist</a>
+                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/playlist">Playlist</a>
                             </li>
                             <li class="nav-item" id="settings">
                                 <!--<svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -75,26 +75,26 @@
                                         d="M12,8 C14.209139,8 16,9.790861 16,12 C16,14.209139 14.209139,16 12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 M12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 M10,22 C9.75,22 9.54,21.82 9.5,21.58 L9.13,18.93 C8.5,18.68 7.96,18.34 7.44,17.94 L4.95,18.95 C4.73,19.03 4.46,18.95 4.34,18.73 L2.34,15.27 C2.21338237,15.0568415 2.26476315,14.7828108 2.46,14.63 L4.57,12.97 L4.5,12 L4.57,11 L2.46,9.37 C2.26476315,9.21718925 2.21338237,8.94315847 2.34,8.73 L4.34,5.27 C4.46,5.05 4.73,4.96 4.95,5.05 L7.44,6.05 C7.96,5.66 8.5,5.32 9.13,5.07 L9.5,2.42 C9.54,2.18 9.75,2 10,2 L14,2 C14.25,2 14.46,2.18 14.5,2.42 L14.87,5.07 C15.5,5.32 16.04,5.66 16.56,6.05 L19.05,5.05 C19.27,4.96 19.54,5.05 19.66,5.27 L21.66,8.73 C21.79,8.95 21.73,9.22 21.54,9.37 L19.43,11 L19.5,12 L19.43,13 L21.54,14.63 C21.73,14.78 21.79,15.05 21.66,15.27 L19.66,18.73 C19.54,18.95 19.27,19.04 19.05,18.95 L16.56,17.95 C16.04,18.34 15.5,18.68 14.87,18.93 L14.5,21.58 C14.46,21.82 14.25,22 14,22 L10,22 M11.25,4 L10.88,6.61 C9.68,6.86 8.62,7.5 7.85,8.39 L5.44,7.35 L4.69,8.65 L6.8,10.2 C6.4,11.3666667 6.4,12.6333333 6.8,13.8 L4.68,15.36 L5.43,16.66 L7.86,15.62 C8.63,16.5 9.68,17.14 10.87,17.38 L11.24,20 L12.76,20 L13.13,17.39 C14.32,17.14 15.37,16.5 16.14,15.62 L18.57,16.66 L19.32,15.36 L17.2,13.81 C17.6,12.64 17.6,11.37 17.2,10.2 L19.31,8.65 L18.56,7.35 L16.15,8.39 C15.3642228,7.48032283 14.2983332,6.85767448 13.12,6.62 L12.75,4 L11.25,4 L11.25,4 Z"
                                         id="Shape" fill="#707070" fill-rule="nonzero"></path>
                                 </svg>-->
-                                <a class="nav-link" href="/mytv/{user_id}/dashboard/{station_id}/settings">Settings ▾</a>
+                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/settings">Settings ▾</a>
 
                                 <!-- Third level -->
                                 <div class="col-sm-12">
                                     <ul class="nav flex-column" id="third-level">
                                         <li class="nav-item" id="broadcastSettings">
-                                            <a class="nav-link" href="/mytv/dashboard/settings/event">Broadcast Settings</a>
+                                            <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/settings/event">Broadcast Settings</a>
                                         </li>
 
                                         <!-- if Community Manager or Station Owner -->
                                         @if($user->role_id <= 2)
                                             <li class="nav-item" id="communitySettings">
-                                                <a class="nav-link" href="/mytv/dashboard/settings/community">Community Settings</a>
+                                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/settings/community">Community Settings</a>
                                             </li>
                                         @endif
 
                                         <!-- if Station Owner -->
                                         @if($user->role_id == 1)
                                             <li class="nav-item" id="stationSettings">
-                                                <a class="nav-link" href="/mytv/dashboard/settings/station">Station Settings</a>
+                                                <a class="nav-link" href="/mytv/{{ $user->id }}/dashboard/settings/station">Station Settings</a>
                                             </li>
                                         @endif
 
