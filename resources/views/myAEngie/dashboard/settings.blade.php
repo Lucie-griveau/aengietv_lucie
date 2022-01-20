@@ -1,6 +1,6 @@
-@extends('/myAEngie/mytv')
+@extends('/myAEngie/dashboard')
 
-@section('mytv')
+@section('dashboard')
 
 
 
