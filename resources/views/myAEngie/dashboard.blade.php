@@ -7,11 +7,11 @@
     <div class="container">
         <form action="" id="form1" autocomplete="off" method="post">
             <div class="zmovo-login-input-top mt-30">
-                <label for="station"><?= "Select Station" ?>
+                <label for="station"><?= "Station:" ?>
 
-                    @include('/myAEngie/include/selectStation')
+                    @include('myAEngie/include/selectStation')
 
-                    @include('/myAEngie/include/userRole')
+                    @include('myAEngie/include/userRole')
 
                 </label>
             </div>
@@ -19,16 +19,6 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-
-        </div>
-        <div class="col-lg-6">
-
-        </div>
-    </div>
-</div>
-
+@yield('dashboard')
 
 @endsection
